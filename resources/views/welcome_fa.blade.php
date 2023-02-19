@@ -5,7 +5,7 @@
         <div class="flex items-center flex-col lg:flex-row w-full md:w-2/3 ">
             <img id="my_profile_pic_holder" class="shrink-0 m-2 w-44 h-44 border border-red-600 rounded-full">
             <p class="shrink py-2 px-5 md:p-0">
-                <span>About Me</span>
+                <span>اردلان</span>
                 <br>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
                 expedita tempore

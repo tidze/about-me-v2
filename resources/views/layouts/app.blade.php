@@ -824,10 +824,10 @@
             }
         }
     </style>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/ js/app.js'])
 </head>
 
-<body class="antialiased ">
+<body class="antialiased bg-customGray_1 text-customWhite_1">
     @include('layouts.navbar')
     @yield('content')
     @include('layouts.footer')

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <title>Epic Games Store | Official Site</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="shortcut icon" href="assets/images/epic-games-50px.png">
-    <link rel="stylesheet" href="{{ asset('css/EpicGamesStyle.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/EpicGamesFonts.css') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/epicgames/images/epic-games-50px.png') }}">
+    <link rel="stylesheet" href="{{ asset('assets/epicgames/EpicGamesStyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/epicgames/EpicGamesFonts.css') }}">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
 
 <body>
 
 <div id="top-navbar">
-    <div id="top-navbar-epic-games-logo"><img src="assets/images/epic-games-100px-white.png" alt=""></div>
-    <div id="alt-holder-btn-toggle"><img src="assets/images/cross-white.png" alt=""></div>
+    <div id="top-navbar-epic-games-logo"><img src="{{ asset('assets/epicgames/images/epic-games-100px-white.png')}} " alt=""></div>
+    <div id="alt-holder-btn-toggle"><img src="{{ asset('assets/epicgames/images/cross-white.png')}}" alt=""></div>
     <div id="alt-holder">
         <ul id="top-navbar-ul">
             <li>
@@ -41,12 +41,12 @@
         <div id="get-epic-games"><a href="#">GET EPIC GAMES</a></div>
         <div id="sign-in-container">
             <a href="{{ route('epicgames-sign-in') }}">
-                <div><img src="assets/images/profile-512px-white.png" alt=""></div>
+                <div><img src="{{ asset('assets/epicgames/images/profile-512px-white.png')}}" alt=""></div>
                 <div><span>SIGN IN</span></div>
             </a>
         </div>
         <div id="world-container">
-            <img src="assets/images/world-128px-white.png" alt="">
+            <img src="{{ asset('assets/epicgames/images/world-128px-white.png')}}" alt="">
             <div id="world-country-list-container">
                 <ul>
                     <li><a href="#">العربیة</a></li>
@@ -75,8 +75,8 @@
 
     <div id="search-browse-discover-box">
         <div id="search-icon-alt">
-            <img src="assets/images/search-128px-white.png" alt="">
-            <img src="assets/images/cross-white.png" alt="">
+            <img src="{{ asset('assets/epicgames/images/search-128px-white.png')}}" alt="">
+            <img src="{{ asset('assets/epicgames/images/cross-white.png')}}" alt="">
         </div>
 
         <div id="search-browse-discover-container">
@@ -106,7 +106,7 @@
 
             <div id="search-container">
                 <form action="search.php">
-                    <div type="submit"><img src="assets/images/search-128px-white.png" alt=""></div>
+                    <div type="submit"><img src="{{ asset('assets/epicgames/images/search-128px-white.png')}}" alt=""></div>
                     <input type="search" placeholder="Search">
                 </form>
             </div>
@@ -123,21 +123,21 @@
         <div id="slide-show-container">
 
             <div class="image-holder">
-                <img src="assets/images/cyberpunk-2077-wallpaper.jpg" alt="">
+                <img src="{{ asset('assets/epicgames/images/cyberpunk-2077-wallpaper.jpg')}}" alt="">
             </div>
             <div class="image-holder">
-                <img src="assets/images/death-stranding-wallpaper.jpg" alt="">
+                <img src="{{ asset('assets/epicgames/images/death-stranding-wallpaper.jpg')}}" alt="">
             </div>
             <div class="image-holder">
-                <img src="assets/images/doom-eternal-wallpaper.jpg" alt="">
+                <img src="{{ asset('assets/epicgames/images/doom-eternal-wallpaper.jpg')}}" alt="">
             </div>
             <div class="image-holder">
-                <img src="assets/images/the_witcher_3_wild_hunt-wallpaper.jpg" alt="">
+                <img src="{{ asset('assets/epicgames/images/the_witcher_3_wild_hunt-wallpaper.jpg')}}" alt="">
             </div>
         </div>
         <div id="info-container">
-            <div class="slide-show-buttons" id="prev-slide-show-btn"><img src="assets/images/arrow-128px-white.png" alt=""></div>
-            <div class="slide-show-buttons" id="next-slide-show-btn"><img src="assets/images/arrow-128px-white.png" alt=""></div>
+            <div class="slide-show-buttons" id="prev-slide-show-btn"><img src="{{ asset('assets/epicgames/images/arrow-128px-white.png')}}" alt=""></div>
+            <div class="slide-show-buttons" id="next-slide-show-btn"><img src="{{ asset('assets/epicgames/images/arrow-128px-white.png')}}" alt=""></div>
             <div id="loading-animation-container">
                 <div>
                     <svg>
@@ -196,14 +196,14 @@
     <!--4 item container-->
     <div class="box-type-a">
         <div class="title-container">
-            <img src="" alt="">
+            <img src="')}}" alt="">
             <div class="title">Title</div>
             <div class="view-more">VIEW MORE</div>
         </div>
         <div class="card-view-container">
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/rdr2-vertical.jpg" alt="Red-Dead-Redemption-2">
+                    <img src="{{ asset('assets/epicgames/images/rdr2-vertical.jpg')}}" alt="Red-Dead-Redemption-2">
                     <div class="card-view-image-white-effect"></div>
                     <div class="card-view-image-early-access"></div>
                 </div>
@@ -218,7 +218,7 @@
             </div>
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/the-forest-vertical.jpg" alt="Red-Dead-Redemption-2">
+                    <img src="{{ asset('assets/epicgames/images/the-forest-vertical.jpg')}}" alt="Red-Dead-Redemption-2">
                     <div class="card-view-image-white-effect"></div>
                     <div class="card-view-image-early-access"></div>
                 </div>
@@ -233,7 +233,7 @@
             </div>
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/the-forest-vertical.jpg" alt="Red-Dead-Redemption-2">
+                    <img src="{{ asset('assets/epicgames/images/the-forest-vertical.jpg')}}" alt="Red-Dead-Redemption-2">
                     <div class="card-view-image-white-effect"></div>
                     <div class="card-view-image-early-access"></div>
                 </div>
@@ -248,7 +248,7 @@
             </div>
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/rdr2-vertical.jpg" alt="Red-Dead-Redemption-2">
+                    <img src="{{ asset('assets/epicgames/images/rdr2-vertical.jpg')}}" alt="Red-Dead-Redemption-2">
                     <div class="card-view-image-white-effect"></div>
                     <div class="card-view-image-early-access"></div>
                 </div>
@@ -267,7 +267,7 @@
     <!--single container-->
     <div class="box-type-b">
         <div class="title-container">
-            <img src="" alt="">
+            <img src="')}}" alt="">
             <div class="title">Pre-Purchase</div>
         </div>
         <div class="info-container">
@@ -281,7 +281,7 @@
             </div>
         </div>
         <div class="image-container">
-            <img src="assets/images/horizon-zero-dawn-.png" alt="">
+            <img src="{{ asset('assets/epicgames/images/horizon-zero-dawn-.png')}}" alt="">
         </div>
 
     </div>
@@ -289,14 +289,14 @@
     <!--2 item container-->
     <div class="box-type-c">
         <div class="title-container">
-            <img src="" alt="">
+            <img src="')}}" alt="">
             <div class="title">Title</div>
             <div class="view-more">VIEW MORE</div>
         </div>
         <div class="card-view-container">
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/borderlands-2-wallpaper.jpg" alt="Red-Dead-Redemption-2">
+                    <img src="{{ asset('assets/epicgames/images/borderlands-2-wallpaper.jpg')}}" alt="Red-Dead-Redemption-2">
                     <div class="card-view-image-white-effect"></div>
                 </div>
                 <div class="card-view-coming-soon">free now</div>
@@ -310,7 +310,7 @@
             </div>
             <div class="card-view">
                 <div class="card-view-image">
-                    <img src="assets/images/art-of-war-3-global-conflict-wallpaper.jpg" alt="Art-Of-War-Global-Conflict">
+                    <img src="{{ asset('assets/epicgames/images/art-of-war-3-global-conflict-wallpaper.jpg')}}" alt="Art-Of-War-Global-Conflict">
                     <div class="card-view-image-white-effect"></div>
                 </div>
                 <div class="card-view-coming-soon">free now</div>
@@ -415,24 +415,9 @@
     </ul>
 </div>
 
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/Main.js') }}"></script>
+<script defer src="{{ asset('assets/epicgames/js/jquery.min.js') }}"></script>
+<script defer src="{{ asset('assets/epicgames/js/Main.js') }}"></script>
 <script>
-    // const mArray = [1,2,3,4,5,6];
-    // const mArray2 = mArray.slice();
-    // console.log("mArray2",mArray2)
-
-    let i = 0
-    let a = {
-        ['foo' + ++i]: i,
-        ['foo' + ++i]: i,
-        ['foo' + ++i]: i
-    }
-
-    console.log(a.foo1) // 1
-    console.log(a.foo2) // 2
-    console.log(a.foo3) // 3
-    console.table(a)
 </script>
 
 </body>

@@ -5,9 +5,9 @@
     <title>Epic Games Store FAQ</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="shortcut icon" href="assets/images/epic-games-50px.png">
-    <link rel="stylesheet" href="{{ asset('css/EpicGamesStyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/epicgames/EpicGamesStyle.css') }}">
     <link rel="stylesheet" href="{{ asset('css/EpicGames-FAQ.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/EpicGamesFonts.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/epicgames/EpicGamesFonts.css') }}"> --}}
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
 

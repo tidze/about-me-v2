@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buy & Sell CSGO Skins</title>
+    <link rel="stylesheet" href="assets/CSGO-fonts.css">
+    <style>
+
+        * {
+            font-family: Helvetica45Light;
+        }
+
+        @media only screen and (max-width: 992px) {
+            body {
+                margin: 0;
+            }
+
+            .search-main-container {
+                padding: 10px 10px 10px 10px;
+            }
+
+            .header-img-1 {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                position: absolute;
+                top: 50%;
+                left: 1%;
+                transform: translate(0%, -50%);
+                background-image: url("./images/apple-compressor.png");
+                background-repeat: no-repeat;
+                background-origin: padding-box;
+                background-position: center;
+                background-size: contain;
+                padding: 0;
+                /*border: 1px solid black;*/
+            }
+
+            .header-img-2 {
+                width: 40px;
+                height: 40px;
+                right: 1%;
+                object-fit: contain;
+                position: absolute;
+                top: 50%;
+                right: 1%;
+                transform: translate(0%, -50%);
+                background-image: url("./images/menu-icon.png");
+                background-repeat: no-repeat;
+                background-origin: padding-box;
+                background-position: center;
+                background-size: contain;
+                padding: 0;
+                border: 1px solid #008966;
+                border-radius: 5px;
+            }
+
+            .header-img-2:hover {
+                background-color: #008966;
+            }
+
+
+        }
+
+        @media only screen and (min-width: 992px) {
+            body {
+                margin: 0;
+            }
+
+            .search-main-container {
+                padding: 10px 230px 10px 230px;
+            }
+
+            .header-img-1 {
+                width: 130px;
+                height: 50px;
+                object-fit: contain;
+                position: absolute;
+                top: 50%;
+                left: 1%;
+                transform: translate(0%, -50%);
+                background-image: url("./images/brand-banner-226x35-compressor.png");
+                background-repeat: no-repeat;
+                background-origin: padding-box;
+                background-position: center;
+                background-size: contain;
+                /*border: 1px solid black;*/
+            }
+
+            .header-img-2 {
+                width: 180px;
+                height: 50px;
+                object-fit: contain;
+                position: absolute;
+                top: 50%;
+                right: 1%;
+                transform: translate(0%, -50%);
+                background-image: url("./images/steam_login_button-no-affil.png");
+                background-repeat: no-repeat;
+                background-origin: padding-box;
+                background-position: center;
+                background-size: contain;
+                padding: 0;
+                /*border: 1px solid #2b2b2b;*/
+            }
+        }
+
+        .header {
+            position: relative;
+            height: 60px;
+            background-color: rgb(0, 188, 140);
+        }
+
+        .header-container-1st {
+            /*border: 1px solid black;*/
+            float: left;
+            /*line-height: 60px;*/
+            margin-left: 180px;
+            height: 100%;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        .header-container-1st-dropdown {
+            display: inline-block;
+            /*width: 200px;*/
+            /*height: 200px;*/
+            margin: 0px;
+            background-color: rgb(48, 48, 48);
+            position: absolute;
+            top: 101%;
+            left: 1%;
+            z-index: 999;
+            padding: 7px 0;
+            display: none;
+            border-radius: 0 0 5px 5px;
+
+        }
+
+        .header-container-1st-dropdown ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .header-container-1st-dropdown li {
+            margin: 0;
+            padding: 5px 35px 5px 20px;
+        }
+
+        .header-container-1st-dropdown li:hover {
+            background-color: rgb(55, 90, 127);
+        }
+
+        .header-container-1st:hover .header-container-1st-dropdown {
+            display: block;
+        }
+
+        .header-container-1st-sub1 {
+            float: left;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            color: white;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-container-1st-sub2 {
+            float: left;
+            line-height: 20px;
+            color: white;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-container-1st-sub3 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            margin: 0;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-container-2nd {
+            float: left;
+            height: 100%;
+            line-height: 60px;
+            position: relative;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        .header-container-3rd {
+            float: left;
+            height: 100%;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        .header-container-3rd-dropdown {
+            /*display: inline-block;*/
+            min-width: 170px;
+            /*height: 200   px;*/
+            margin: 0px;
+            background-color: rgb(48, 48, 48);
+            position: absolute;
+            top: 101%;
+            left: 1%;
+            z-index: 999;
+            /*padding: 7px 0;*/
+            display: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .header-container-3rd-dropdown ul {
+            margin: 0;
+            padding: 5px 0;
+            list-style-type: none;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .header-container-3rd-dropdown li {
+            margin: 0;
+            padding: 0;
+            display: block;
+            overflow-x: hidden;
+            /*border: 1px solid white;*/
+            /*padding: 5px 35px 5px 20px;*/
+        }
+
+        .header-container-3rd-dropdown li:hover {
+            background-color: rgb(55, 90, 127);
+        }
+
+        .header-container-3rd:hover .header-container-3rd-dropdown {
+            display: block;
+        }
+
+        .header-container-3rd-dropdown img {
+            /*border: 1px solid black;*/
+            width: 15px;
+            height: 15px;
+        }
+
+        .header-container-3rd-dropdown-img-div {
+            float: left;
+            margin: 6px 5px 2px 20px;
+        }
+
+        .header-container-3rd-dropdown-txt-div {
+            /*border: 1px solid black;*/
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+
+        .header-container-4th {
+            float: left;
+            height: 100%;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        .header-container-4th-dropdown {
+            /*display: inline-block;*/
+            min-width: 210px;
+            /*height: 200   px;*/
+            margin: 0px;
+            background-color: rgb(48, 48, 48);
+            position: absolute;
+            top: 101%;
+            left: 1%;
+            z-index: 999;
+            /*padding: 7px 0;*/
+            display: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .header-container-4th-dropdown ul {
+            margin: 0;
+            padding: 5px 0;
+            list-style-type: none;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .header-container-4th-dropdown li {
+            margin: 0;
+            padding: 0;
+            display: block;
+            overflow-x: hidden;
+        }
+
+        .header-container-4th-dropdown li:hover {
+            background-color: rgb(55, 90, 127);
+        }
+
+        .header-container-4th:hover .header-container-4th-dropdown {
+            display: block;
+        }
+
+        .header-container-4th-dropdown img {
+            /*border: 1px solid black;*/
+            width: 15px;
+            height: 15px;
+        }
+
+        .header-container-4th-dropdown-img-div {
+            float: left;
+            margin: 6px 5px 2px 20px;
+        }
+
+        .header-container-4th-dropdown-txt-div {
+            /*border: 1px solid black;*/
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+
+        .header-container-1st:hover .header-container-1st-sub1,
+        .header-container-1st:hover .header-container-1st-sub2 {
+            color: rgb(55, 90, 127);
+        }
+
+        .header-container-1st:hover .header-container-1st-sub3 div {
+            border-top: rgb(55, 90, 127) solid 5px;
+            border-left: transparent solid 5px;
+            border-right: transparent solid 5px;
+        }
+
+        .header-container-2nd:hover {
+            color: rgb(55, 90, 127);
+        }
+
+        .header-container-3rd:hover .header-container-1st-sub2 {
+            color: rgb(55, 90, 127);
+        }
+
+        .header-container-3rd:hover .header-container-1st-sub3 div {
+            border-top: rgb(55, 90, 127) solid 5px;
+            border-left: transparent solid 5px;
+            border-right: transparent solid 5px;
+        }
+
+        .header-container-4th:hover .header-container-1st-sub2 {
+            color: rgb(55, 90, 127);
+        }
+
+        .header-container-4th:hover .header-container-1st-sub3 div {
+            border-top: rgb(55, 90, 127) solid 5px;
+            border-left: transparent solid 5px;
+            border-right: transparent solid 5px;
+        }
+
+
+        /*.header-img-2 {*/
+        /*    width: 180px;*/
+        /*    height: 50px;*/
+        /*    object-fit: contain;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    right: 1%;*/
+        /*    transform: translate(0%, -50%);*/
+        /*}*/
+
+        .games-header {
+            text-align: center;
+            background-color: rgb(34, 34, 34);
+            padding: 15px 15px 10px 15px;
+        }
+
+        .games-header-items-container {
+            /*border: 1px solid black;*/
+            display: inline-block;
+            position: relative;
+            margin-left: 1px;
+            margin-right: 1px;
+            background-color: rgb(70, 69, 69);
+        }
+
+        .games-header-items-container:hover {
+            background-color: rgb(44, 44, 44);
+        }
+
+        .games-header-items-container-pic {
+            /*border: 1px solid black;*/
+            width: 20px;
+            height: 20px;
+            float: left;
+            padding: 7px 1px 7px 7px;
+            /*line-height: 30px;*/
+        }
+
+        .games-header-items-container-pic img {
+            width: 20px;
+            height: 20px;
+            /*line-height: 30px;*/
+        }
+
+        .games-header-items-container-txt {
+            /*border: 1px solid black;*/
+            color: white;
+            float: left;
+            height: 20px;
+            padding: 7px 7px 7px 1px;
+            line-height: 20px;
+            font-size: 17px;
+        }
+
+        /*---------------------------------------------------------------------------------------------------------------------------------------*/
+        .games-header-items-container-hint {
+            visibility: hidden;
+            background-color: black;
+            white-space: nowrap;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 99;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            padding: 5px;
+        }
+
+        .games-header-items-container-hint::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .games-header-items-container:hover .games-header-items-container-hint {
+            visibility: visible;
+        }
+
+        /*---------------------------------------------------------------------------------------------------------------------------------------*/
+        .weapons-container-header {
+            text-align: center;
+            background-color: rgb(34, 34, 34);
+            padding: 15px 15px 10px 15px;
+        }
+
+        .weapons-container-items {
+            display: inline-block;
+            position: relative;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: rgb(70, 69, 69);
+        }
+
+        .weapons-container-items-txt {
+            float: left;
+            color: white;
+            font-size: 12px;
+            padding: 10px 2px 10px 10px;
+        }
+
+        .weapons-container-items-arrow {
+            /*float: left;*/
+            /*margin: 15px 10px 0px 2px;*/
+            width: 0;
+            height: 0;
+            border-top: white solid 5px;
+            border-left: transparent solid 5px;
+            border-right: transparent solid 5px;
+            position: absolute;
+        }
+
+        .arrow-down-10px {
+            border-top: #0CE3AC 10px solid;
+            border-left: transparent 10px solid;
+            border-right: transparent 10px solid;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 15px;
+        }
+
+        .arrow-down-10px-red {
+            border-top: red 10px solid;
+            border-left: transparent 10px solid;
+            border-right: transparent 10px solid;
+        }
+
+        .center-transform-translate-triangle {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .center-transform-translate-all {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center-transform-translate-horizontally {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .center-transform-translate-vertically {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .weapons-container-items-arrow-container {
+            width: 20px;
+            height: 32px;
+            /*border:1px mediumvioletred solid;*/
+            float: left;
+            position: relative;
+        }
+
+        .weapons-container-items:hover {
+            background-color: rgb(44, 44, 44);
+        }
+
+        .weapons-container-dropdown {
+            padding: 5px 0;
+            position: absolute;
+            /*margin-left: 10px;*/
+            white-space: nowrap;
+            top: 102%;
+            background-color: rgb(48, 48, 48);
+            /*background-color: #FFDC00;*/
+            min-width: 100px;
+            /*max-width: 220px;*/
+            min-height: 50px;
+            max-height: 300px;
+            overflow-x: hidden;
+            z-index: 9999;
+            display: none;
+            text-align: left;
+        }
+
+        .weapons-container-items:hover .weapons-container-dropdown {
+            display: block;
+        }
+
+        .weapons-container-dropdown ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .weapons-container-dropdown li {
+            font-size: 15px;
+            padding: 5px 45px 5px 20px;
+        }
+
+        .weapons-container-dropdown li:hover {
+            background-color: rgb(55, 90, 127);
+        }
+
+        .weapons-container-dropdown a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /*---------------------------------------------------------------------------------------------------------------------------------------*/
+        .search-title-1st {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 30px;
+        }
+
+        .search-title-2nd {
+            color: #999999;
+            text-align: center;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        .search-main-container {
+            /*border: 1px solid #ffd24d;*/
+            /*padding: 10px 230px 10px 230px;*/
+            margin-top: 10px;
+        }
+
+        .search-sub-container {
+            /*border: 1px solid blueviolet;*/
+            position: relative;
+        }
+
+        .search-sub-container input {
+            border: 5px solid #303030;
+            padding: 15px 10px;
+            width: 100%;
+            font-size: 15px;
+        }
+
+        .search-sub-container img {
+            width: 17px;
+            height: 17px;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 2px;
+            font-size: 15px;
+            /*right: 45px*/
+        }
+
+        input[type=search]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            /*appearance: none;*/
+            margin: 0;
+        }
+
+        .search-advanced-container {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #00a379;
+            visibility: hidden;
+            display: none;
+        }
+
+        .hint-container {
+            display: inline-block;
+        }
+
+        .hint {
+            min-width: 240px;
+            position: absolute;
+            visibility: hidden;
+            /*background-color: #00a379;*/
+            color: white;
+            z-index: 999;
+            /*border: 1px red solid;*/
+            border-radius: 10px;
+
+            /*font-size: 13px;*/
+            /*padding: 5px 10px;*/
+        }
+
+        .hint-center {
+            text-align: center;
+        }
+
+        .hint-nowrap {
+            white-space: nowrap;
+        }
+
+        .hint-top {
+            bottom: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hint-bottom {
+            top: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hint-left {
+            right: 150%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hint-right {
+            left: 150%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hint::after {
+            content: " ";
+            border-style: solid;
+            position: absolute;
+            /*border-color: #303030 transparent transparent transparent;*/
+            z-index: 999;
+        }
+
+        .hint-top::after {
+            border-color: #303030 transparent transparent transparent;
+            top: 100%;
+            left: 50%;
+            z-index: 9999;
+            border-width: 7px;
+            transform: translate(-50%, 0);
+        }
+
+        .hint-bottom::after {
+            border-color: transparent transparent #303030 transparent;
+            bottom: 100%;
+            left: 50%;
+            z-index: 9999;
+            border-width: 7px;
+            transform: translate(-50%, 0);
+        }
+
+        .hint-right::after {
+            border-color: transparent #303030 transparent transparent;
+            right: 100%;
+            bottom: 50%;
+            z-index: 9999;
+            border-width: 7px;
+            transform: translate(0, 50%);
+        }
+
+        .hint-left::after {
+            border-color: transparent transparent transparent #303030;
+            left: 100%;
+            bottom: 50%;
+            z-index: 9999;
+            border-width: 7px;
+            transform: translate(0, 50%);
+        }
+
+        .hint-container:hover .hint {
+            visibility: visible;
+        }
+
+        .main-cardview {
+            width: 300px;
+            height: 450px;
+            background-color: #222222;
+            /*border: 1px solid #FFDC00;*/
+            /*margin: 10px 10px 200px 50px;*/
+            margin: 5px;
+            /*text-align: center;*/
+            position: relative;
+            display: inline-block;
+            z-index: 999;
+        }
+
+        .main-cardview-header {
+            width: 100%;
+            min-height: 60px;
+            margin: 0;
+            padding: 0;
+            background-color: #303030;
+            position: relative;
+        }
+
+        .main-cardview-body {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .main-cardview-icon-left {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            float: left;
+            right: 0;
+            top: 25px;
+            color: white;
+        }
+
+        .main-cardview-item-name {
+            min-width: 120px;
+            height: 20px;
+            line-height: 20px;
+            margin: 5px;
+            color: white;
+            float: left;
+        }
+
+        .main-cardview-icon-right {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            float: left;
+            right: 0;
+            top: 5px
+        }
+
+        .main-cardview-body-itemstyle-txt {
+            padding: 5px;
+            color: white;
+            float: left;
+            font-size: 13px;
+        }
+
+        .main-cardview-body-rarity-color {
+            width: 4px;
+            height: 25px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+        }
+
+        .main-cardview-body-price-container {
+            clear: left;
+            min-width: 50px;
+            padding-top: 10px;
+            position: relative;
+            min-height: 30px;
+            text-align: center;
+        }
+
+        .main-cardview-body-main-price {
+            font-size: 17px;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .main-cardview-body-off-price {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            padding: 2px 7px;
+            background-color: #3A87AD;
+            border-radius: 20px;
+        }
+
+        .main-cardview-body-suggested-price-container {
+            color: #9CA9A9;
+            text-align: center;
+            font-size: 12px;
+            font-weight: lighter;
+            letter-spacing: 1px;
+        }
+
+        .main-cardview-body-suggested-price-txt {
+            display: inline-block;
+        }
+
+        .main-cardview-body-suggested-price-num {
+            display: inline-block;
+        }
+
+        .main-cardview-body-suggested-price-num a {
+            text-decoration: none;
+            color: #9CA9A9;
+        }
+
+        .main-cardview-body-suggested-price-num a:hover {
+            text-decoration: underline;
+        }
+
+        .main-cardview-body-small-container {
+            /*border: #1c699d 1px solid;*/
+            text-align: center;
+            margin-top: 10px;
+            margin-right: 70px;
+        }
+
+        .main-cardview-body-small-container a {
+            text-decoration: none;
+        }
+
+        .main-cardview-body-small {
+            width: 25px;
+            height: 25px;
+            background-color: #464545;
+            color: white;
+            /*float: left;*/
+            display: inline-block;
+            position: relative;
+        }
+
+        .main-cardview-body-small img {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 20%;
+        }
+
+        .main-cardview-body-small:hover {
+            background-color: #282727;
+        }
+
+        .main-cardview-body-small-add-to-card {
+            width: 75px;
+            height: 25px;
+            background-color: #00BC8C;
+            color: white;
+            font-size: 12px;
+            line-height: 25px;
+            position: relative;
+            top: -25px;
+            left: 175px;
+        }
+
+        .main-cardview-body-small-add-to-card:hover {
+            background-color: #006f4e;
+        }
+
+        /*----------------------------------------- -----♦♦♦♦♦♦♦♦♦♦♦hint-small-container♦♦♦♦♦♦♦♦♦♦♦-----------------------------------------------------------------*/
+        .hint-container-s {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hint-s {
+            visibility: hidden;
+            background-color: black;
+            white-space: nowrap;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 99;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .hint-s::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .hint-container-s:hover .hint-s {
+            visibility: visible;
+        }
+
+        /*----------------------------------------- -----♦♦♦♦♦♦♦♦♦♦♦hint-small-container♦♦♦♦♦♦♦♦♦♦♦-----------------------------------------------------------------*/
+        .main-cardview-body-image-of-item {
+            width: 100%;
+            height: 200px;
+        }
+
+        .main-cardview-body-image-of-item img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .main-cardview-body-footer {
+            width: 100%;
+            height: 45px;
+            /*border: red 1px solid;*/
+            text-align: center;
+        }
+
+        .main-cardview-body-footer-image {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left: 11vh;
+        }
+
+        .main-cardview-body-footer-image img {
+            width: 12px;
+            height: 12px;
+        }
+
+        .main-cardview-body-footer-txt-1 {
+            color: white;
+            font-size: 12px;
+            font-family: Verdana;
+            /*letter-spacing: 1px;*/
+        }
+
+        .main-cardview-body-footer-txt-2 {
+            color: #838383;
+            font-family: Verdana;
+            font-size: 12px;
+            /*letter-spacing: 1px;*/
+        }
+
+        .main-cardview-body-footer-colorized {
+            height: 7px;
+            width: 100%;
+            position: relative;
+            bottom: 4px;
+            /*background-color: yellow;*/
+        }
+
+        .main-cardview-body-footer-colorized img {
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            left: 25px;
+            top: -13px;
+            /*background-color: yellow;*/
+        }
+
+        .main-cardview-body-footer-colorized-1 {
+            height: 100%;
+            width: 7%;
+            background-color: #00BC8C;
+            float: left;
+        }
+
+        .main-cardview-body-footer-colorized-2 {
+            height: 100%;
+            width: 10%;
+            background-color: #3498DB;
+            float: left;
+        }
+
+        .main-cardview-body-footer-colorized-3 {
+            height: 100%;
+            width: 23%;
+            background-color: #375A7F;
+            float: left;
+        }
+
+        .main-cardview-body-footer-colorized-4 {
+            height: 100%;
+            width: 7%;
+            background-color: #F39C12;
+            float: left;
+        }
+
+        .main-cardview-body-footer-colorized-5 {
+            height: 100%;
+            width: 53%;
+            background-color: #E74C3C;
+            float: left;
+        }
+
+        .shadow-hover-for-cardview {
+            padding: 1px;
+            display: inline-block;
+            margin: 1px;
+        }
+
+        .shadow-hover-for-cardview:hover {
+            background-color: #464545;
+        }
+    </style>
+
+<body>
+
+    <div class="header">
+        <a href="#">
+            <img class="header-img-1" src="" alt="">
+        </a>
+        <a href="#">
+            <img class="header-img-2" src="" alt="">
+        </a>
+
+        <a href="#">
+            <div class="header-container-1st">
+                <div class="header-container-1st-sub1">&#9732;</div>
+                <div class="header-container-1st-sub2">Deals</div>
+                <div class="header-container-1st-sub3">
+                    <div class="weapons-container-items-arrow center-transform-translate-all"></div>
+                </div>
+                <div class="header-container-1st-dropdown">
+                    <ul>
+                        <li>$200 and above</li>
+                        <li>$100 and above</li>
+                        <li>$50 and above</li>
+                        <li>$25 to $50</li>
+                        <li>$10 to $25</li>
+                        <li>$5 to $10</li>
+                        <li>$1 to $5</li>
+                        <li>$0.5 to $1</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-container-2nd">Price Check</div>
+        </a>
+        <a href="#">
+            <div class="header-container-3rd">
+                <div class="header-container-1st-sub2">API</div>
+                <div class="header-container-1st-sub3">
+                    <div class="weapons-container-items-arrow center-transform-translate-all"></div>
+                </div>
+                <div class="header-container-3rd-dropdown">
+                    <ul>
+                        <li>
+                            <div class="header-container-3rd-dropdown-img-div">
+                                <img src="./images/two-gears.png" alt="two-gears.png">
+                            </div>
+                            <div class="header-container-3rd-dropdown-txt-div">General</div>
+                        </li>
+                        <li>
+                            <div class="header-container-3rd-dropdown-img-div">
+                                <img src="./images/gear.png" alt="gear.png">
+                            </div>
+                            <div class="header-container-3rd-dropdown-txt-div">Buy Orders</div>
+                        </li>
+                        <li>
+                            <div class="header-container-3rd-dropdown-img-div">
+                                <img src="./images/bitcoin.png" alt="bitcoin.png">
+                            </div>
+                            <div class="header-container-3rd-dropdown-txt-div">Crypto Deposits</div>
+                        </li>
+                        <li>
+                            <div class="header-container-3rd-dropdown-img-div">
+                                <img src="./images/wifi.png" alt="wifi.png">
+                            </div>
+                            <div class="header-container-3rd-dropdown-txt-div">Websockets</div>
+                        </li>
+                        <div style="height: 1px;width: 100%;background-color: #464545;margin:10px 0;"></div>
+                        <li>
+                            <div class="header-container-3rd-dropdown-img-div">
+                                <img src="./images/bracket.png" alt="bracket.png">
+                            </div>
+                            <div class="header-container-3rd-dropdown-txt-div">Change Log</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-container-4th">
+                <div class="header-container-1st-sub2">Help</div>
+                <div class="header-container-1st-sub3">
+                    <div class="weapons-container-items-arrow center-transform-translate-all"></div>
+                </div>
+                <div class="header-container-4th-dropdown">
+                    <ul>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/question.png" alt="question.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">FAQ</div>
+                        </li>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/at.png" alt="at.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Support</div>
+                        </li>
+                        <div style="height: 1px;width: 100%;background-color: #464545;margin:10px 0 ;"></div>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/exit.png" alt="exit.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Sign In With Out Steam</div>
+                        </li>
+                        <div style="height: 1px;width: 100%;background-color: #464545;margin:10px 0 ;"></div>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/paper-pen.png" alt="paper-pen.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Terms Of Use</div>
+                        </li>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/paper-pen.png" alt="paper-pen.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Privacy Policy</div>
+                        </li>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/paper-pen.png" alt="paper-pen.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Cookie Policy</div>
+                        </li>
+                        <div style="height: 1px;width: 100%;background-color: #464545;margin:10px 0 ;"></div>
+                        <li>
+                            <div class="header-container-4th-dropdown-img-div">
+                                <img src="./images/computer.png" alt="computer.png">
+                            </div>
+                            <div class="header-container-4th-dropdown-txt-div">Change Log</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    </div>
+    <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    <div class="games-header">
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/csgo_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">CSGO</div>
+                <span class="games-header-items-container-hint">Counter Strike: Global Offensive</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/dota2_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">DotA2</div>
+                <span class="games-header-items-container-hint">Deffence of the Ancients 2</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/z1br_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">Z1BR</div>
+                <span class="games-header-items-container-hint">Z1 Battle Royale</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/tf2_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">TF2</div>
+                <span class="games-header-items-container-hint">Team Fortress 2</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/pubg_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">TF2</div>
+                <span class="games-header-items-container-hint">Player Unknown Battle Ground</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/unturned_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">Unturned</div>
+                <span class="games-header-items-container-hint">Unturned</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/pd2_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">PD2</div>
+                <span class="games-header-items-container-hint">Payday 2</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/rust_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">Rust</div>
+                <span class="games-header-items-container-hint">Rust</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/kf2_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">KF2</div>
+                <span class="games-header-items-container-hint">Killing Floor 2</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/js_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">JS</div>
+                <span class="games-header-items-container-hint">Just Survive</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/bat1944_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">BAT1994</div>
+                <span class="games-header-items-container-hint">Battalion 1944</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/depth_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">Depth</div>
+                <span class="games-header-items-container-hint">Depth</span>
+            </a>
+        </div>
+        <div class="games-header-items-container">
+            <a href="#">
+                <div class="games-header-items-container-pic"><img src="./images/bsq_small.jpg" alt=""></div>
+                <div class="games-header-items-container-txt">BSQ</div>
+                <span class="games-header-items-container-hint">Black Squad</span>
+            </a>
+        </div>
+    </div>
+    <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    <div style="background-color: rgb(70, 69, 69);height: 1px"></div>
+    <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    <div class="weapons-container-header">
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Knifes</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>Bayonet</li>
+                    </a>
+                    <a href="#">
+                        <li>Bowie Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Butterfly Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Classic Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Falcon Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Flip Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Gut Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Huntsman Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Karambit</li>
+                    </a>
+                    <a href="#">
+                        <li>M9 Bayonet</li>
+                    </a>
+                    <a href="#">
+                        <li>Navaja Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Nomad Knife</li>
+                    </a>
+                    <a href="#">
+                        <li>Paracord Knife</li>
+                    </a>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Pistols</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>CZ75-Auto</li>
+                    </a>
+                    <a href="#">
+                        <li>Desert Eagle</li>
+                    </a>
+                    <a href="#">
+                        <li>Dual Berettas</li>
+                    </a>
+                    <a href="#">
+                        <li>Five-SeveN</li>
+                    </a>
+                    <a href="#">
+                        <li>Glock-18</li>
+                    </a>
+                    <a href="#">
+                        <li>P2000</li>
+                    </a>
+                    <a href="#">
+                        <li>P250</li>
+                    </a>
+                    <a href="#">
+                        <li>R8 Revolver</li>
+                    </a>
+                    <a href="#">
+                        <li>Tec-9</li>
+                    </a>
+                    <a href="#">
+                        <li>USP-S</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">SMGs</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>MAC-10</li>
+                    </a>
+                    <a href="#">
+                        <li>MP5-SD</li>
+                    </a>
+                    <a href="#">
+                        <li>MP7</li>
+                    </a>
+                    <a href="#">
+                        <li>MP9</li>
+                    </a>
+                    <a href="#">
+                        <li>P90</li>
+                    </a>
+                    <a href="#">
+                        <li>PP-Bizon</li>
+                    </a>
+                    <a href="#">
+                        <li>UMP-45</li>
+                    </a>
+                </ul>
+
+            </div>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Rifles</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>AK-47</li>
+                    </a>
+                    <a href="#">
+                        <li>AUG</li>
+                    </a>
+                    <a href="#">
+                        <li>FAMAS</li>
+                    </a>
+                    <a href="#">
+                        <li>Galil AR</li>
+                    </a>
+                    <a href="#">
+                        <li>M4A1-S</li>
+                    </a>
+                    <a href="#">
+                        <li>M4A4</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Sniper Rifles</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>AWP</li>
+                    </a>
+                    <a href="#">
+                        <li>G3SG1</li>
+                    </a>
+                    <a href="#">
+                        <li>SCAR-20</li>
+                    </a>
+                    <a href="#">
+                        <li>SSG 08</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Shotguns</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>MAG-7</li>
+                    </a>
+                    <a href="#">
+                        <li>Nova</li>
+                    </a>
+                    <a href="#">
+                        <li>Sawed-Off</li>
+                    </a>
+                    <a href="#">
+                        <li>XM1014</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Machineguns</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+            <div class="weapons-container-dropdown">
+                <ul>
+                    <a href="#">
+                        <li>M249</li>
+                    </a>
+                    <a href="#">
+                        <li>Negev</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Rarities</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Itemsets</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">Wears</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+        </div>
+        <div class="weapons-container-items">
+            <a href="#">
+                <div class="weapons-container-items-txt">More</div>
+                <div class="weapons-container-items-arrow-container">
+                    <div class="weapons-container-items-arrow center-transform-translate-triangle"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    <div style="background-color: rgb(70, 69, 69);height: 1px"></div>
+    <!---------------------------------------------------------♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦---------------------------------------------------------------------->
+    <div style="background-color: #222222">
+        <div class="search-title-1st">CSGO Items On Time</div>
+        <div class="search-title-2nd">Get The Best Deals.</div>
+        <div class="search-main-container">
+            <div class="search-sub-container">
+                <form action="request.php" method="get">
+                    <input type="search" placeholder="Search for CSGO Items">
+                </form>
+                <div class="hint-container-green-10px">
+                    <div class="arrow-down-10px center-transform-translate-horizontally">
+                    </div>
+                    <span class="games-header-items-container-hint">THis is hint</span>
+                </div>
+                <div class="hint-container center-transform-translate-horizontally" style="right: 45px;z-index: 999999">
+                    <img src="./images/question-b.png" alt="question-b.png">
+                    <div style="text-align: left;border-radius: 10px;" class="hint hint-left">
+                        <div style="text-align: left;border-radius:10px 10px 0 0;border:1px solid transparent;background-color: #282828;font-size: 20px;padding:
+                            7px">Search
+                            Examples
+                        </div>
+                        <div style="height: 1px;background-color: black"></div>
+                        <div style="text-align: left;border-radius: 0 0 10px 10px;border:1px solid transparent;padding: 0 10px;background-color: #303030;">
+                            <p><strong>Full Item Name:</strong> 'chroma 2 case key' provides just the chroma 2 case key results.</p>
+                            <p><strong>Keywords:</strong> 'hey' provides just the items with key in their names.</p>
+                            <p><strong>Exclude Keywords:</strong> 'not(case)' provides the items without case in their names.</p>
+                            <p><strong>Mixed Keywords:</strong> 'key not(capsule monkey)' provides items with key in the name, but not monkey and capsule.</p>
+                            <p><strong>Meta Search: </strong> 'chroma case key; marvel fade' provides the exact matches for chroma case key, and and items with marble fade in
+                                the
+                                name.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--            Full Item Name: 'chroma 2 case key' provides just the chroma 2 case key results.  -->
+                <!--            Keywords: 'hey' provides just the items with key in their names.   -->
+                <!--            Exclude Keywords: 'not(case)' provides the items without case in their names.   -->
+                <!--            Mixed Keywords: 'key not(capsule monkey)' provides items with key in the name, but not monkey and capsule.   -->
+                <!--            Meta Search: 'chroma case key; marvel fade' provides the exact matches for chroma case key, and and items with marble fade in the name.   -->
+            </div>
+            <div class="search-advanced-container">
+                <form action="">
+                    <select name="item_type" id=""></select>
+                </form>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="shadow-hover-for-cardview">
+                <div class="main-cardview">
+                    <div class="main-cardview-header">
+                        <div class="main-cardview-icon-left">&#9733
+                            <!--                <img src="./images/question.png" alt="question.png" class="center-transform-translate-all" width="15px" height="15px">-->
+                        </div>
+                        <div class="main-cardview-item-name">AK-47 | Asiimov</div>
+                        <div class="main-cardview-icon-right">
+                            <img src="./images/vertical-rocket-red.png" alt="vertical-rocket-red.png" class="center-transform-translate-all" width="15px" height="15px">
+                        </div>
+                    </div>
+                    <div style="height:1px;background-color: black;position:relative;margin:0;padding:0;"></div>
+                    <div class="main-cardview-body">
+                        <div class="main-cardview-body-itemstyle-txt">
+                            Minimal Wear / Mil-Spec Grade Pistol / 230
+                        </div>
+                        <div class="main-cardview-body-rarity-color"></div>
+                        <div class="main-cardview-body-price-container">
+                            <div class="main-cardview-body-main-price">$25.00</div>
+                            <div class="main-cardview-body-off-price">22% off</div>
+                        </div>
+                        <div class="main-cardview-body-suggested-price-container">
+                            <div class="main-cardview-body-suggested-price-txt">Suggested Price:</div>
+                            <div class="main-cardview-body-suggested-price-num"><a href="#">$23.99</a></div>
+                        </div>
+                        <div class="main-cardview-body-small-container">
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/steam.png" alt="steam.png">
+                                    <span class="hint-s">Inspect in-game</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/eye.png" alt="eye.png">
+                                    <span class="hint-s">View at Steam</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/road.png" alt="road.png">
+                                    <span class="hint-s">See more like this</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/share.png" alt="share.png">
+                                    <span class="hint-s">View sharable link</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small-add-to-card">Add to Cart</div>
+                            </a>
+                        </div>
+
+                        <div class="main-cardview-body-image-of-item">
+                            <img src="" alt="ak47-akimov.png">
+                        </div>
+                        <div class="main-cardview-body-footer">
+                            <div class="main-cardview-body-footer-image"><img src="./images/check-mark-green.png" alt=""></div>
+                            <div class="main-cardview-body-footer-txt-1">Instantly Withdrawable</div>
+                            <div class="main-cardview-body-footer-txt-2">Wear: 0.24381211</div>
+                        </div>
+                        <div class="main-cardview-body-footer-colorized">
+                            <div class="main-cardview-body-footer-colorized-1"></div>
+                            <div class="main-cardview-body-footer-colorized-2"></div>
+                            <div class="main-cardview-body-footer-colorized-3"></div>
+                            <div class="main-cardview-body-footer-colorized-4"></div>
+                            <div class="main-cardview-body-footer-colorized-5"></div>
+                            <img src="./images/arrow-down-white.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-hover-for-cardview">
+                <div class="main-cardview">
+                    <div class="main-cardview-header">
+                        <div class="main-cardview-icon-left">&#9733
+                            <!--                <img src="./images/question.png" alt="question.png" class="center-transform-translate-all" width="15px" height="15px">-->
+                        </div>
+                        <div class="main-cardview-item-name">AK-47 | Asiimov</div>
+                        <div class="main-cardview-icon-right">
+                            <img src="./images/vertical-rocket-red.png" alt="vertical-rocket-red.png" class="center-transform-translate-all" width="15px" height="15px">
+                        </div>
+                    </div>
+                    <div style="height:1px;background-color: black;position:relative;margin:0;padding:0;"></div>
+                    <div class="main-cardview-body">
+                        <div class="main-cardview-body-itemstyle-txt">
+                            Minimal Wear / Mil-Spec Grade Pistol / 230
+                        </div>
+                        <div class="main-cardview-body-rarity-color"></div>
+                        <div class="main-cardview-body-price-container">
+                            <div class="main-cardview-body-main-price">$25.00</div>
+                            <div class="main-cardview-body-off-price">22% off</div>
+                        </div>
+                        <div class="main-cardview-body-suggested-price-container">
+                            <div class="main-cardview-body-suggested-price-txt">Suggested Price:</div>
+                            <div class="main-cardview-body-suggested-price-num"><a href="#">$23.99</a></div>
+                        </div>
+                        <div class="main-cardview-body-small-container">
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/steam.png" alt="steam.png">
+                                    <span class="hint-s">Inspect in-game</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/eye.png" alt="eye.png">
+                                    <span class="hint-s">View at Steam</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/road.png" alt="road.png">
+                                    <span class="hint-s">See more like this</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/share.png" alt="share.png">
+                                    <span class="hint-s">View sharable link</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small-add-to-card">Add to Cart</div>
+                            </a>
+                        </div>
+
+                        <div class="main-cardview-body-image-of-item">
+                            <img src="./images/ak47-akimov.png" alt="ak47-akimov.png">
+                        </div>
+                        <div class="main-cardview-body-footer">
+                            <div class="main-cardview-body-footer-image"><img src="./images/check-mark-green.png" alt=""></div>
+                            <div class="main-cardview-body-footer-txt-1">Instantly Withdrawable</div>
+                            <div class="main-cardview-body-footer-txt-2">Wear: 0.24381211</div>
+                        </div>
+                        <div class="main-cardview-body-footer-colorized">
+                            <div class="main-cardview-body-footer-colorized-1"></div>
+                            <div class="main-cardview-body-footer-colorized-2"></div>
+                            <div class="main-cardview-body-footer-colorized-3"></div>
+                            <div class="main-cardview-body-footer-colorized-4"></div>
+                            <div class="main-cardview-body-footer-colorized-5"></div>
+                            <img src="./images/arrow-down-white.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-hover-for-cardview">
+                <div class="main-cardview">
+                    <div class="main-cardview-header">  
+                        <div class="main-cardview-icon-left">&#9733
+                            <!--                <img src="./images/question.png" alt="question.png" class="center-transform-translate-all" width="15px" height="15px">-->
+                        </div>
+                        <div class="main-cardview-item-name">AK-47 | Asiimov</div>
+                        <div class="main-cardview-icon-right">
+                            <img src="./images/vertical-rocket-red.png" alt="vertical-rocket-red.png" class="center-transform-translate-all" width="15px" height="15px">
+                        </div>
+                    </div>
+                    <div style="height:1px;background-color: black;position:relative;margin:0;padding:0;"></div>
+                    <div class="main-cardview-body">
+                        <div class="main-cardview-body-itemstyle-txt">
+                            Minimal Wear / Mil-Spec Grade Pistol / 230
+                        </div>
+                        <div class="main-cardview-body-rarity-color"></div>
+                        <div class="main-cardview-body-price-container">
+                            <div class="main-cardview-body-main-price">$25.00</div>
+                            <div class="main-cardview-body-off-price">22% off</div>
+                        </div>
+                        <div class="main-cardview-body-suggested-price-container">
+                            <div class="main-cardview-body-suggested-price-txt">Suggested Price:</div>
+                            <div class="main-cardview-body-suggested-price-num"><a href="#">$23.99</a></div>
+                        </div>
+                        <div class="main-cardview-body-small-container">
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/steam.png" alt="steam.png">
+                                    <span class="hint-s">Inspect in-game</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/eye.png" alt="eye.png">
+                                    <span class="hint-s">View at Steam</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/road.png" alt="road.png">
+                                    <span class="hint-s">See more like this</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/share.png" alt="share.png">
+                                    <span class="hint-s">View sharable link</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small-add-to-card">Add to Cart</div>
+                            </a>
+                        </div>
+
+                        <div class="main-cardview-body-image-of-item">
+                            <img src="" alt="ak47-akimov.png">
+                        </div>
+                        <div class="main-cardview-body-footer">
+                            <div class="main-cardview-body-footer-image"><img src="./images/check-mark-green.png" alt=""></div>
+                            <div class="main-cardview-body-footer-txt-1">Instantly Withdrawable</div>
+                            <div class="main-cardview-body-footer-txt-2">Wear: 0.24381211</div>
+                        </div>
+                        <div class="main-cardview-body-footer-colorized">
+                            <div class="main-cardview-body-footer-colorized-1"></div>
+                            <div class="main-cardview-body-footer-colorized-2"></div>
+                            <div class="main-cardview-body-footer-colorized-3"></div>
+                            <div class="main-cardview-body-footer-colorized-4"></div>
+                            <div class="main-cardview-body-footer-colorized-5"></div>
+                            <img src="./images/arrow-down-white.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-hover-for-cardview">
+                <div class="main-cardview">
+                    <div class="main-cardview-header">
+                        <div class="main-cardview-icon-left">&#9733
+                            <!--                <img src="./images/question.png" alt="question.png" class="center-transform-translate-all" width="15px" height="15px">-->
+                        </div>
+                        <div class="main-cardview-item-name">AK-47 | Asiimov</div>
+                        <div class="main-cardview-icon-right">
+                            <img src="./images/vertical-rocket-red.png" alt="vertical-rocket-red.png" class="center-transform-translate-all" width="15px" height="15px">
+                        </div>
+                    </div>
+                    <div style="height:1px;background-color: black;position:relative;margin:0;padding:0;"></div>
+                    <div class="main-cardview-body">
+                        <div class="main-cardview-body-itemstyle-txt">
+                            Minimal Wear / Mil-Spec Grade Pistol / 230
+                        </div>
+                        <div class="main-cardview-body-rarity-color"></div>
+                        <div class="main-cardview-body-price-container">
+                            <div class="main-cardview-body-main-price">$25.00</div>
+                            <div class="main-cardview-body-off-price">22% off</div>
+                        </div>
+                        <div class="main-cardview-body-suggested-price-container">
+                            <div class="main-cardview-body-suggested-price-txt">Suggested Price:</div>
+                            <div class="main-cardview-body-suggested-price-num"><a href="#">$23.99</a></div>
+                        </div>
+                        <div class="main-cardview-body-small-container">
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/steam.png" alt="steam.png">
+                                    <span class="hint-s">Inspect in-game</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/eye.png" alt="eye.png">
+                                    <span class="hint-s">View at Steam</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/road.png" alt="road.png">
+                                    <span class="hint-s">See more like this</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/share.png" alt="share.png">
+                                    <span class="hint-s">View sharable link</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small-add-to-card">Add to Cart</div>
+                            </a>
+                        </div>
+
+                        <div class="main-cardview-body-image-of-item">
+                            <img src="./images/ak47-akimov.png" alt="ak47-akimov.png">
+                        </div>
+                        <div class="main-cardview-body-footer">
+                            <div class="main-cardview-body-footer-image"><img src="./images/check-mark-green.png" alt=""></div>
+                            <div class="main-cardview-body-footer-txt-1">Instantly Withdrawable</div>
+                            <div class="main-cardview-body-footer-txt-2">Wear: 0.24381211</div>
+                        </div>
+                        <div class="main-cardview-body-footer-colorized">
+                            <div class="main-cardview-body-footer-colorized-1"></div>
+                            <div class="main-cardview-body-footer-colorized-2"></div>
+                            <div class="main-cardview-body-footer-colorized-3"></div>
+                            <div class="main-cardview-body-footer-colorized-4"></div>
+                            <div class="main-cardview-body-footer-colorized-5"></div>
+                            <img src="./images/arrow-down-white.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-hover-for-cardview">
+                <div class="main-cardview">
+                    <div class="main-cardview-header">
+                        <div class="main-cardview-icon-left">&#9733
+                            <!--                <img src="./images/question.png" alt="question.png" class="center-transform-translate-all" width="15px" height="15px">-->
+                        </div>
+                        <div class="main-cardview-item-name">AK-47 | Asiimov</div>
+                        <div class="main-cardview-icon-right">
+                            <img src="./images/vertical-rocket-red.png" alt="vertical-rocket-red.png" class="center-transform-translate-all" width="15px" height="15px">
+                        </div>
+                    </div>
+                    <div style="height:1px;background-color: black;position:relative;margin:0;padding:0;"></div>
+                    <div class="main-cardview-body">
+                        <div class="main-cardview-body-itemstyle-txt">
+                            Minimal Wear / Mil-Spec Grade Pistol / 230
+                        </div>
+                        <div class="main-cardview-body-rarity-color"></div>
+                        <div class="main-cardview-body-price-container">
+                            <div class="main-cardview-body-main-price">$25.00</div>
+                            <div class="main-cardview-body-off-price">22% off</div>
+                        </div>
+                        <div class="main-cardview-body-suggested-price-container">
+                            <div class="main-cardview-body-suggested-price-txt">Suggested Price:</div>
+                            <div class="main-cardview-body-suggested-price-num"><a href="#">$23.99</a></div>
+                        </div>
+                        <div class="main-cardview-body-small-container">
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/steam.png" alt="steam.png">
+                                    <span class="hint-s">Inspect in-game</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/eye.png" alt="eye.png">
+                                    <span class="hint-s">View at Steam</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s">
+                                    <img src="./images/road.png" alt="road.png">
+                                    <span class="hint-s">See more like this</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small hint-container-s"><img src="./images/share.png" alt="share.png">
+                                    <span class="hint-s">View sharable link</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="main-cardview-body-small-add-to-card">Add to Cart</div>
+                            </a>
+                        </div>
+
+                        <div class="main-cardview-body-image-of-item">
+                            <img src="./images/ak47-akimov.png" alt="ak47-akimov.png">
+                        </div>
+                        <div class="main-cardview-body-footer">
+                            <div class="main-cardview-body-footer-image"><img src="./images/check-mark-green.png" alt=""></div>
+                            <div class="main-cardview-body-footer-txt-1">Instantly Withdrawable</div>
+                            <div class="main-cardview-body-footer-txt-2">Wear: 0.24381211</div>
+                        </div>
+                        <div class="main-cardview-body-footer-colorized">
+                            <div class="main-cardview-body-footer-colorized-1"></div>
+                            <div class="main-cardview-body-footer-colorized-2"></div>
+                            <div class="main-cardview-body-footer-colorized-3"></div>
+                            <div class="main-cardview-body-footer-colorized-4"></div>
+                            <div class="main-cardview-body-footer-colorized-5"></div>
+                            <img src="./images/arrow-down-white.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;text-align: center;overflow-x: hidden;margin-top: 10px;margin-bottom: -20px">
+            <p style="display: inline-block;color: white;font-size: 14px;"><strong>Page: 1</strong></p>
+            <img style="display: inline-block;" width="12px" height="12px" src="./images/next-page-green.png">
+        </div>
+        <div style="width: 100%;text-align: center">
+            <img style="display: inline-block;" width="12px" height="12px" src="./images/twitter-green.png">
+            <img style="display: inline-block;" width="12px" height="12px" src="./images/circle-green.png">
+            <p style="display: inline-block;color: #696969">BitSkins 2020. Powered by Steam. Not affiliated with Valve Corp.</p>
+        </div>
+        <div style="width: 100%;text-align: center">
+            <img style="display: inline-block;" width="45px" height="24px" src="./images/visa.jpg">
+            <img style="display: inline-block;" width="50px" height="25px" src="./images/mastercard.svg">
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
